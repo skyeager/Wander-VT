@@ -42,7 +42,7 @@
 
 ### **_Getting Started_**
 
-#### Upon entering Wander-VT, visitors will see a list of Vermont's best hikes. Site visitors can click on different hikes in the list and will then enter a page displaying specific information about that  hike. The hike page will also display previous posts from individuals who have completed the specific hike. These posts display "update" and "delete" buttons for the individual to edit or remove a post. This page also offers individuals an opportunity to write their own post about that hike. A "post" button will redirect individuals to a form to complete a new post. 
+#### Upon entering Wander VT, visitors will see a list of Vermont's best hikes. Site visitors can click on different hikes in the list and will then enter a page displaying specific information about that  hike. The hike page will also display previous posts from individuals who have completed the specific hike. These posts display "update" and "delete" buttons for the individual to edit or remove a post. This page also offers individuals an opportunity to write their own post about that hike. A "post" button will redirect individuals to a form to complete a new post. 
 
 ---
 
@@ -52,7 +52,7 @@
 
 ![Wander VT Inspiration](https://media.wired.com/photos/5d1ba327c4634800090144a2/125:94/w_2375,h_1786,c_limit/Gear-Hiking-Apps-858049750.jpg)
 
-<figcaption>A Vermont Hike Found on Wander-VT</figcaption>
+<figcaption>A Vermont Hike Found on Wander VT</figcaption>
 
 ![Vermont Outdoors](https://urbanoutdoors.com/wp-content/uploads/2020/10/Depositphotos_123186406_l-2015.jpg)
 
@@ -68,8 +68,8 @@
 
 ### **_Future Updates_**
 
-- [ ] Create user authentication.
 - [ ] Adapt for mobile version.
+- [ ] Create user authentication.
 - [ ] Allow users to save their favorite hikes.
 - [ ] Display hikes in order of review popularity.
 
