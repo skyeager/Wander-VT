@@ -14,7 +14,7 @@
 
 ### **_*Description*_**
 
-#### Wander VT is a full-stack application that aims to serve the active outdoor community of Vermont. This web application provides information on the best hikes around--from the highest peaks to casual wooded walks. This information includes an image of the hike, elevation, difficulty, and distance. This application also provides site visitors the ability to post when they've completed one of the listed hikes. Not only can site visitors access hike information, they can make a post about a hike, update a post, and even delete posts. This will be completed without user profiles or user authentication. Wander VT implements front-end and back-end programming languages and technologies to provide hikers of Vermont more information on Vermont's trails all while allowing site visitors to document and provide feedback on listed hikes.
+#### Wander VT is a full-stack application that aims to serve the active outdoor community of Vermont. This web application provides information on the best hikes around--from the highest peaks to casual wooded walks. This information includes an image of the hike, elevation, difficulty, and distance. This application also provides site visitors the ability to post when they've completed one of the listed hikes. Not only can site visitors access hike information, they can make a post about a hike, update a post, and even delete posts. This will be completed without user profiles or user authentication. Wander VT implements front-end and back-end programming languages and technologies to provide hikers of Vermont with two offerings--more information on Vermont's trails and the ability to document and provide feedback on listed hikes.
 
 ---
 
@@ -42,7 +42,7 @@
 
 ### **_Getting Started_**
 
-#### Upon entering Wander-VT, visitors will see a list of Vermont's best hikes. Site visitors can click on different listed hikes to learn more facts about them. Upon entering the specific hike page, individuals can then write, edit, or delete a post about that hike for other site visitors to see.
+#### Upon entering Wander-VT, visitors will see a list of Vermont's best hikes. Site visitors can click on different hikes in the list and will then enter a page displaying specific information about that  hike. The hike page will also display previous posts from individuals who have completed the specific hike. These posts display "update" and "delete" buttons for the individual to edit or remove a post. This page also offers individuals an opportunity to write their own post about that hike. A "post" button will redirect individuals to a form to complete a new post. 
 
 ---
 
