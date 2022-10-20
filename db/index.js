@@ -1,15 +1,16 @@
-const express = require('express')
-const routes = require('./routes')
-const db = require('./db')
-//const logger= require('morgan')
-//need to have morgan?
+const mongoose = require('mongoose')
 
-const PORT = process.env.PORT || 3001
+let MONGODB_URI = 'mongodb://127.0.0.1:27017/plantsDatabase'
 
-const app = express()
-app.use(express.json())
-// app.use(logger('dev'))
+mongoose
+  .connect(MONGODB_URI)
+  .then(() => {
+    console.log('Successfully connected to MongoDB.')
+  })
+  .catch((e) => {
+    console.error('Connection error', e.message)
+  })
 
-db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+const db = mongoose.connection
 
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
+module.exports = db
