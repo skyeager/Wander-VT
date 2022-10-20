@@ -1,0 +1,23 @@
+{
+  "name": "wander-vt",
+  "version": "1.0.0",
+  "description": "## Date: 10/20/2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyeager/Wander-VT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skyeager/Wander-VT/issues"
+  },
+  "homepage": "https://github.com/skyeager/Wander-VT#readme",
+  "dependencies": {
+    "mongoose": "^6.6.5"
+  }
+}
