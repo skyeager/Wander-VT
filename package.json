@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/skyeager/Wander-VT#readme",
   "dependencies": {
-    "mongoose": "^6.6.5"
+    "cors": "^2.8.5",
+    "mongoose": "^6.6.5",
+    "morgan": "^1.10.0"
   }
 }
