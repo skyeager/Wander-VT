@@ -1,15 +1,39 @@
-const readHike = (request, response) => {
-  response.send({
-    title: 'Snake Mountain',
-    elevation: 1287,
-    difficulty: 'Moderate',
-    distance: 28512,
-    image:
-      'https://npr.brightspotcdn.com/35/34/b3285b11420cb3e63148d87b6766/snake-mountain-view-ncpr-emily-russell-20210820.jpeg',
-    instance_id: '1'
-  })
+const { Hike } = require('../models')
+
+const createHike = async (req, res) => {
+  try {
+    const hike = await new Hike(req.body)
+    await hike.save()
+    return res.status(201).json({
+      hike
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
+const getHikeById = async (req, res) => {
+  try {
+    const hike = await Hike.findById(req.params.id).populate('instances')
+    return res.status(200).json({
+      hike
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
+const getAllHikes = async (req, res) => {
+  try {
+    const hikes = await Hike.find()
+    return res.status(200).json({ hikes })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
 }
 
 module.exports = {
-  readHike
+  createHike,
+  getHikeById,
+  getAllHikes
 }
