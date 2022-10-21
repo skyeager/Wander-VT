@@ -1,24 +1,27 @@
 const createPost = (request, response) => {
   response.send({
-    msg: 'testing createPost'
+    message: 'testing create'
   })
 }
 
 const readPost = (request, response) => {
   response.send({
-    msg: 'testing getPost'
+    title: 'test',
+    message: 'test',
+    authorName: 'test',
+    image: 'kjdfng'
   })
 }
 
 const updatePost = (request, response) => {
   response.send({
-    msg: 'testing updatePost'
+    message: 'testing update'
   })
 }
 
 const deletePost = (request, response) => {
   response.send({
-    msg: 'testing deletePost'
+    message: 'testing delete'
   })
 }
 

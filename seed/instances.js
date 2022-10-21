@@ -6,7 +6,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
   const instances = [
     {
-      id: 1,
+      // id: 1,
       title: 'test',
       message: 'test',
       authorName: 'test',
