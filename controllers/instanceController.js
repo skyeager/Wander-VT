@@ -41,8 +41,7 @@ const updatePost = async (req, res) => {
 
 const deletePost = async (req, res) => {
   try {
-    const instance = await Instance.findById(req.params.id)
-    await Instance.deleteOne(instance)
+    const instance = await Instance.findByIdAndDelete(req.params.id)
     return res.status(200).json({
       instance
     })
