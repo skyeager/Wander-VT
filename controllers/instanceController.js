@@ -15,34 +15,45 @@ const createInstance = async (req, res) => {
   }
 }
 
-const readPost = (request, response) => {
-  response.send({
-    title: '',
-    message: '',
-    authorName: '',
-    image: ''
-  })
+const getInstanceById = async (req, res) => {
+  try {
+    const instance = await Instance.findById(req.params.id).populate(
+      'instances'
+    )
+    return res.status(200).json({
+      instance
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
 }
 
-const updatePost = (request, response) => {
-  response.send({
-    id: '',
-    title: '',
-    message: '',
-    authorName: '',
-    image: ''
-  })
+const updatePost = async (req, res) => {
+  try {
+    const instance = await Instance.findByIdAndUpdate(req.params.id, req.params)
+    return res.status(200).json({
+      instance
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
 }
 
-const deletePost = (request, response) => {
-  response.send({
-    id: ''
-  })
+const deletePost = async (req, res) => {
+  try {
+    const instance = await Instance.findById(req.params.id)
+    await Instance.deleteOne(instance)
+    return res.status(200).json({
+      instance
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
 }
 
 module.exports = {
-  readPost,
+  createInstance,
+  getInstanceById,
   updatePost,
-  deletePost,
-  createInstance
+  deletePost
 }
