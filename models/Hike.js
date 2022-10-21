@@ -2,6 +2,7 @@ const { Schema } = require('mongoose')
 
 const Hike = new Schema(
   {
+    // id: { type: Number, required: true },
     title: { type: String, required: true },
     elevation: { type: Number, required: true },
     difficulty: { type: String, required: true },
