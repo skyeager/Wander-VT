@@ -15,6 +15,15 @@ const createHike = async (req, res) => {
   }
 }
 
+const getAllHikes = async (req, res) => {
+  try {
+    const hikes = await Hike.find()
+    return res.status(200).json({ hike })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const Instance = require('../models/Instance')
 
 const createInstance = async (req, res) => {
@@ -31,5 +40,6 @@ const createInstance = async (req, res) => {
 
 module.exports = {
   createHike,
-  createInstance
+  createInstance,
+  getAllHikes
 }
