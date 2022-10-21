@@ -1,7 +1,7 @@
-const Index = () => {
-  return <div></div>
-}
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App'
 
-export default Index
+const root = createRoot(document.getElementById('root'))
 
-//do I need this file? do I mean index.html? Wha?
+root.render(<App />)
