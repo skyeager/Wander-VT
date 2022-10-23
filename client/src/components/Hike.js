@@ -23,4 +23,4 @@ const Hike = () => {
 
 export default Hike
 
-// as defined in index.js, /instance allows someone to create an instance of a hike
+// as defined in routes/index.js, /instance allows someone to create an instance of a hike

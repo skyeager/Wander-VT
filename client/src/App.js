@@ -6,7 +6,6 @@ import HikeList from './components./HikeList'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { getAllHikes } from '.../controllers/hikeController'
-import hikesArray from '.../seed/hikes'
 
 const App = () => {
   return (
