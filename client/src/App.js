@@ -9,16 +9,6 @@ import { getAllHikes } from '.../controllers/hikeController'
 import hikesArray from '.../seed/hikes'
 
 const App = () => {
-  const [hikes, setHikes] = useState([hikesArray])
-
-  useEffect(() => {
-    const getHikes = async () => {
-      const response = await axios.get('http://localhost:3001/wander/allHikes')
-      setHikes(response.data.results)
-    }
-    getHikes()
-  }, [])
-
   return (
     <div>
       <header>
@@ -28,6 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/allHikes" element={<HikeList hikes={hikes} />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
     </div>
@@ -35,9 +26,6 @@ const App = () => {
 }
 
 export default App
-
-//do i need to put /wander on line 12 or just /?
-//are these url endpoints the same as in the backend? or diferent?
 
 // ADD About section in between Home and HikeList components.
 /* <Route path="/about" element={<About />} /> */
