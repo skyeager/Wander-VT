@@ -2,7 +2,7 @@ const { Router } = require('express')
 const controllers = require('../controllers')
 const router = Router()
 
-router.get('/', (req, res) => res.send('This is the root route!'))
+router.get('/', (req, res) => res.send('Welcome to Wander!'))
 
 router.post('/hike', controllers.hikeController.createHike)
 router.get('/hike/:id', controllers.hikeController.getHikeById)
