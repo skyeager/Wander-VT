@@ -26,6 +26,3 @@ const App = () => {
 }
 
 export default App
-
-// ADD About section in between Home and HikeList components.
-/* <Route path="/about" element={<About />} /> */

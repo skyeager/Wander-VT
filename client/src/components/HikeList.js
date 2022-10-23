@@ -24,6 +24,9 @@ const HikeList = (props) => {
           <img src={hike.image} alt={hike.title}></img>
           <h3>{hike.title}</h3>
           <button>More Hike Details</button>
+          <Routes>
+            <Route path-="/hike/:id" element={<Hike />} />
+          </Routes>
         </div>
       ))}
     </div>
