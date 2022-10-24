@@ -1,16 +1,20 @@
-// const Form = () => {
-//   const [instance, setInstance] = useState()
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
-//   useEffect(() => {
-//     const getInstance = async () => {
-//       const response = await axios.get('http://localhost:3001/wander/instance')
-//       setHike(response.data.results)
-//       console.log(props)
-//     }
-//     getInstance()
-//   }, [])
+const Form = (props) => {
+  const [instance, setInstance] = useState()
+  const [hike, setHike] = useState()
 
-//   return <div></div>
-// }
+  useEffect(() => {
+    const getInstance = async () => {
+      const response = await axios.get('http://localhost:3001/wander/instance')
+      setHike(response.data.hikes)
+      console.log(props)
+    }
+    getInstance()
+  }, [])
 
-// export default Form
+  return <div></div>
+}
+
+export default Form

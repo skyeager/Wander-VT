@@ -3,8 +3,6 @@ import NavBar from './components/NavBar'
 import Home from './components/Home'
 import About from './components/About'
 import HikeList from './components/HikeList'
-import axios from 'axios'
-import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 const App = () => {

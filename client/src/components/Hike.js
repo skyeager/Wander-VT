@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Form from './Form'
+import { Link } from 'react-router-dom'
 
 const Hike = () => {
   const [hike, setHike] = useState({})
@@ -23,8 +24,9 @@ const Hike = () => {
       <h2>Distance: {hike.distance}</h2>
       <h2>{hike.instances}</h2>
       <Routes>
-        <Route path-="/instance" element={<Form />} />
+        <Route path="/instance" element={<Form />} />
       </Routes>
+      <Link to="/">Home</Link>
     </div>
   )
 }

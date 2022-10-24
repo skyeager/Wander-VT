@@ -3,9 +3,15 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const HikeList = (props) => {
   const [hikes, setHikes] = useState([])
+  let navigate = useNavigate()
+
+  const showHike = (hike) => {
+    navigate(`${hike.id}`)
+  }
 
   const getHikes = async () => {
     const response = await axios.get('http://localhost:3001/wander/allHikes/')
@@ -21,12 +27,16 @@ const HikeList = (props) => {
   return (
     <div className="hike-grid">
       {hikes.map((hike) => (
-        <div className="hike-card" key={hike._id}>
+        <div
+          className="hike-card"
+          key={hike._id}
+          onClick={() => showHike(hike)}
+        >
           <img src={hike.image} alt={hike.title} />
           <h3>{hike.title}</h3>
           <Link to={hike._id}>Hike Info</Link>
           <Routes>
-            <Route path="/:id" element={<Hike />} />
+            <Route path="/:id/*" element={<Hike />} />
           </Routes>
         </div>
       ))}
