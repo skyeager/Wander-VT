@@ -8,8 +8,6 @@ const HikeList = (props) => {
 
   const getHikes = async () => {
     const response = await axios.get('http://localhost:3001/wander/allHikes/')
-    console.log(response)
-
     setHikes(response.data.hikes)
   }
 

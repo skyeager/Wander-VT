@@ -26,6 +26,7 @@ const Hike = () => {
       <h2>Distance: {hike.distance}</h2>
       <h2>{hike.instances}</h2>
       <Link to="/">Home</Link>
+      <button>I've hiked this trail!</button>
     </div>
   )
 }
