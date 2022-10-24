@@ -33,11 +33,16 @@ const Form = (props) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <label htmlFor="name">Name:</label>
-      <input type="text" id="name" />
+      <input onChange={handleChange} type="text" id="name" />
       <label htmlFor="title">Title:</label>
-      <input type="text" id="title" />
+      <input onChange={handleChange} type="text" id="title" />
       <label htmlFor="message">Message:</label>
-      <textarea id="message" cols="30" rows="10"></textarea>
+      <textarea
+        onChange={handleChange}
+        id="message"
+        cols="30"
+        rows="10"
+      ></textarea>
       <button type="submit">Post My Hike!</button>
     </form>
   )
