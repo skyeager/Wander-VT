@@ -33,9 +33,19 @@ const Form = (props) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <label htmlFor="name">Name:</label>
-      <input onChange={handleChange} type="text" id="name" value={formState.name}>
+      <input
+        onChange={handleChange}
+        type="text"
+        id="name"
+        value={formState.name}
+      />
       <label htmlFor="title">Title:</label>
-      <input onChange={handleChange} type="text" id="title" value={formState.title} />
+      <input
+        onChange={handleChange}
+        type="text"
+        id="title"
+        value={formState.title}
+      />
       <label htmlFor="message">Message:</label>
       <textarea
         onChange={handleChange}
