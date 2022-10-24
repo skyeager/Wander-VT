@@ -33,12 +33,13 @@ const Form = (props) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <label htmlFor="name">Name:</label>
-      <input onChange={handleChange} type="text" id="name" />
+      <input onChange={handleChange} type="text" id="name" value={formState.name}>
       <label htmlFor="title">Title:</label>
-      <input onChange={handleChange} type="text" id="title" />
+      <input onChange={handleChange} type="text" id="title" value={formState.title} />
       <label htmlFor="message">Message:</label>
       <textarea
         onChange={handleChange}
+        value={formState.message}
         id="message"
         cols="30"
         rows="10"
