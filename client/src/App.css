@@ -1,3 +1,10 @@
+.App{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -27,7 +34,8 @@ code {
 .form{
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  justify-content: space-around;
+  width: 25vw;
   height: 400px;
 }
 
