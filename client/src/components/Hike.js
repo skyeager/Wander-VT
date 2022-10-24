@@ -1,16 +1,18 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Form from './Form'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const Hike = () => {
   const [hike, setHike] = useState({})
 
+  const { id } = useParams()
+
   useEffect(() => {
     const getHike = async () => {
-      const response = await axios.get('http://localhost:3001/wander/hike/:id')
-      setHike(response.data.hikes)
+      const response = await axios.get(
+        `http://localhost:3001/wander/hike/${id}`
+      )
+      setHike(response.data.hike)
     }
     getHike()
   }, [])
@@ -18,14 +20,11 @@ const Hike = () => {
   return (
     <div>
       <h3>{hike.title}</h3>
-      <h2>{hike.image}</h2>
+      <img src={hike.image} alt={hike.title} />
       <h2>Elevation: {hike.elevation}</h2>
       <h2>Difficulty: {hike.difficulty}</h2>
       <h2>Distance: {hike.distance}</h2>
       <h2>{hike.instances}</h2>
-      <Routes>
-        <Route path="/instance" element={<Form />} />
-      </Routes>
       <Link to="/">Home</Link>
     </div>
   )
