@@ -1,31 +1,32 @@
 import Hike from './Hike'
-import Form from './Form'
-import About from './About'
-import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const HikeList = (props) => {
-  const [hikes, setHikes] = useState()
+  const [hikes, setHikes] = useState([])
+
+  const getHikes = async () => {
+    const response = await axios.get('http://localhost:3001/wander/allHikes/')
+    console.log(response)
+
+    setHikes(response.data.hikes)
+  }
 
   useEffect(() => {
-    const getHikes = async () => {
-      const response = await axios.get('http://localhost:3001/wander/allHikes')
-      setHikes(response.data.results)
-      console.log(props)
-    }
     getHikes()
   }, [])
 
   return (
     <div className="hike-grid">
-      {props.hikes.map((hike) => (
-        <div className="hike-card" key={hike.id}>
-          <img src={hike.image} alt={hike.title}></img>
+      {hikes.map((hike) => (
+        <div className="hike-card" key={hike._id}>
+          <img src={hike.image} alt={hike.title} />
           <h3>{hike.title}</h3>
-          <button>More Hike Details</button>
+          <Link to={hike._id}>Hike Info</Link>
           <Routes>
-            <Route path-="/hike/:id" element={<Hike />} />
+            <Route path="/:id" element={<Hike />} />
           </Routes>
         </div>
       ))}

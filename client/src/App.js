@@ -1,11 +1,11 @@
 import './App.css'
-import NavBar from './components/Navbar'
+import NavBar from './components/NavBar'
 import Home from './components/Home'
 import About from './components/About'
-import HikeList from './components./HikeList'
+import HikeList from './components/HikeList'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { getAllHikes } from '.../controllers/hikeController'
+import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/allHikes" element={<HikeList hikes={hikes} />} />
+          <Route path="/allHikes/*" element={<HikeList />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
