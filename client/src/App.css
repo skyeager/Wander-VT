@@ -24,3 +24,10 @@ code {
   background-color: gray;
 }
 
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 400px;
+}
+
