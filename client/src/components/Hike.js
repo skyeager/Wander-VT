@@ -27,6 +27,7 @@ const Hike = () => {
       <h2>{hike.instances}</h2>
       <Link to="/">Home</Link>
       <button>I've hiked this trail!</button>
+      {/* //onClick conditional rendering here to show component! */}
     </div>
   )
 }

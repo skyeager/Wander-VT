@@ -2,8 +2,14 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const Form = (props) => {
-  const [instance, setInstance] = useState()
   const [hike, setHike] = useState()
+  const initialState = {
+    name: '',
+    title: '',
+    message: ''
+  }
+
+  const [formState, setFormState] = useState(initialState)
 
   useEffect(() => {
     const getInstance = async () => {
@@ -14,7 +20,11 @@ const Form = (props) => {
     getInstance()
   }, [])
 
-  return <div></div>
+  return (
+    <div>
+      <form></form>
+    </div>
+  )
 }
 
 export default Form
