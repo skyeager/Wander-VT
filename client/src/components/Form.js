@@ -4,21 +4,23 @@ import axios from 'axios'
 const Form = (props) => {
   const [hike, setHike] = useState()
   const initialState = {
-    name: '',
+    authorName: '',
     title: '',
-    message: ''
+    message: '',
+    image:
+      'https://cdn2.apstatic.com/photos/hike/7029288_smallMed_1554924128.jpg',
+    hikeId: props.id
   }
 
   const [formState, setFormState] = useState(initialState)
 
-  useEffect(() => {
-    const getInstance = async () => {
-      const response = await axios.get('http://localhost:3001/wander/instance')
-      setHike(response.data.hikes)
-      console.log(props)
-    }
-    getInstance()
-  }, [])
+  // useEffect(() => {
+  //   const getInstance = async () => {
+  //     const response = await axios.get('http://localhost:3001/wander/instance')
+  //     setHike(response.data.)
+  //   }
+  //   getInstance()
+  // }, [])
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -32,12 +34,12 @@ const Form = (props) => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
+      <label htmlFor="authorName">Name:</label>
       <input
         onChange={handleChange}
         type="text"
         id="name"
-        value={formState.name}
+        value={formState.authorName}
       />
       <label htmlFor="title">Title:</label>
       <input
@@ -54,6 +56,13 @@ const Form = (props) => {
         cols="30"
         rows="10"
       ></textarea>
+      <label htmlFor="image">Post Image (url):</label>
+      <input
+        onChange={handleChange}
+        type="text"
+        id="image"
+        value={formState.image}
+      />
       <button type="submit">Post My Hike!</button>
     </form>
   )

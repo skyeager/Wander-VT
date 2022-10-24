@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
+import Form from './Form'
 
 const Hike = () => {
   const [hike, setHike] = useState({})
@@ -18,9 +19,9 @@ const Hike = () => {
     getHike()
   }, [])
 
-  const showForm = (form) => {
-    navigate('/instance')
-  }
+  // const showForm = (form) => {
+  //   navigate('/instance')
+  // }
 
   return (
     <div>
@@ -30,6 +31,7 @@ const Hike = () => {
       <h2>Difficulty: {hike.difficulty}</h2>
       <h2>Distance: {hike.distance}</h2>
       <h2>{hike.instances}</h2>
+      <Form id={hike._id} />
       <Link to="/">Home</Link>
       {/* <button onClick={() => showForm(form)}>I've hiked this trail!</button> */}
       {/* //onClick conditional rendering here to show component! */}
