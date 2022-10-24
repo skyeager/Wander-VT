@@ -1,33 +1,46 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 
 const Form = (props) => {
-  const [hike, setHike] = useState()
   const initialState = {
     authorName: '',
     title: '',
     message: '',
-    image:
-      'https://cdn2.apstatic.com/photos/hike/7029288_smallMed_1554924128.jpg',
+    image: '',
     hikeId: props.id
   }
 
   const [formState, setFormState] = useState(initialState)
 
-  // useEffect(() => {
-  //   const getInstance = async () => {
-  //     const response = await axios.get('http://localhost:3001/wander/instance')
-  //     setHike(response.data.)
-  //   }
-  //   getInstance()
-  // }, [])
+  //trying to set entered values equal to current state:
 
-  const handleSubmit = (event) => {
+  //trying to do post request for this hike to display the instance added for this specific hike (along with all other previous instances of this hike):
+  // let res = await axios.post(
+  //   'http://localhost:3001/wander/instance',
+  //   formState
+  // )
+
+  //when submit:
+  //create new instance
+  //push this instance into instance array (that lives in Hike model)
+  //get request for this hike (with the new instance on it, and past instances)
+  //when the form is submitted this runs the function we want to run and then sets it back to empty
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(formState)
+    const instancePackage = {
+      authorName: formState.authorName,
+      title: formState.title,
+      message: formState.message,
+      image: formState.image,
+      hikeId: props.id
+    }
+    // setFormState().push(instancePackage)
     setFormState(initialState)
   }
 
+  //axios call pass instancePackage
+
+  //this sets the value entered in each field of the form equal to the state of the form
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
