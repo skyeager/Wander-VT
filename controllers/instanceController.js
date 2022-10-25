@@ -17,9 +17,7 @@ const createInstance = async (req, res) => {
 
 const getInstanceById = async (req, res) => {
   try {
-    const instance = await Instance.findById(req.params.id).populate(
-      'instances'
-    )
+    const instance = await Instance.findById(req.params.id)
     return res.status(200).json({
       instance
     })
