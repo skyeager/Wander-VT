@@ -45,3 +45,9 @@ code {
   justify-content: space-around;
   align-items: center;
 }
+
+.instance{
+  border: 2px solid black;
+  width: 500px;
+  height: 400px;
+}

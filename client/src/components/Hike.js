@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Form from './Form'
+import Instance from './Instance'
 
 const Hike = () => {
   const [hike, setHike] = useState({})
