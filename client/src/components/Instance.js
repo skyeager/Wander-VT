@@ -30,25 +30,13 @@ const Instance = (props) => {
       <h2>Title:{props.instance.title}</h2>
       <h2>Notes from the trail:{props.instance.message}</h2>
       <img src={props.instance.image} alt="hike photo" height="100px" />
-      {/* <button onClick={() => updateInstance(instance)}>Update Post</button> */}
+      <button>Update Post</button>
       <button onClick={deleteInstance}>Delete Post</button>
     </div>
   )
 }
 
-// const [instance, setInstance] = useState([])
-
-// const { id } = useParams()
-
-// useEffect(() => {
-//   const getInstance = async () => {
-//     const response = await axios.get(
-//       `http://localhost:3001/wander/instances/${id}`
-//     )
-//     console.log(response)
-//     setInstance(response.data.instance)
-//   }
-//   getInstance()
-// }, [])
+//add the following into Update Post button?:
+// onClick={() => updateInstance(instance)}
 
 export default Instance

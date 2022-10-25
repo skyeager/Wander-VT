@@ -3,7 +3,11 @@ const UpdateForm = () => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
-  return <div className="update-form"></div>
+  return (
+    <div className="update-form">
+      <button>Post Update</button>
+    </div>
+  )
 }
 
 export default UpdateForm
