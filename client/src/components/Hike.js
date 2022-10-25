@@ -33,7 +33,7 @@ const Hike = () => {
           instance={instance}
           setHike={setHike}
           index={index}
-          key={instance._id}
+          key={index}
           hike={hike}
         />
       ))}

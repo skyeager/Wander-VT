@@ -7,11 +7,6 @@ const Instance = (props) => {
 
   const handleClick = () => setUpdateInstance(true)
 
-  if (updateInstance) {
-    return <UpdateInstance />
-  } else {
-  }
-
   const deleteInstance = async () => {
     await axios.delete(
       `http://localhost:3001/wander/instances/${props.instance._id}`
@@ -23,16 +18,27 @@ const Instance = (props) => {
     props.setHike(updatedHike)
   }
 
-  return (
-    <div className="instance">
-      <h2>Name: {props.instance.authorName}</h2>
-      <h2>Title:{props.instance.title}</h2>
-      <h2>Notes from the trail:{props.instance.message}</h2>
-      <img src={props.instance.image} alt="hike photo" height="100px" />
-      <button onClick={handleClick}>Update Post</button>
-      <button onClick={deleteInstance}>Delete Post</button>
-    </div>
-  )
+  if (updateInstance) {
+    return <UpdateInstance />
+  } else {
+    return (
+      <div className="instance">
+        <h2>Name: {props.instance.authorName}</h2>
+        <h2>Title:{props.instance.title}</h2>
+        <h2>Notes from the trail:{props.instance.message}</h2>
+        <img src={props.instance.image} alt="hike photo" height="100px" />
+
+        <button onClick={handleClick}>Update Post</button>
+        <button onClick={deleteInstance}>Delete Post</button>
+        <UpdateInstance
+          title={props.instance.title}
+          message={props.instance.message}
+          authorName={props.instance.authorName}
+          image={props.instance.image}
+        />
+      </div>
+    )
+  }
 }
 
 export default Instance
