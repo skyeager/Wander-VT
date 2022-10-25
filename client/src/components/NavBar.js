@@ -5,14 +5,10 @@ const NavBar = () => {
     <nav className="navbar">
       <h3>Wander VT</h3>
       <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/allHikes">All Hikes</Link>
-          </li>
-        </ul>
+        <Link to="/">Home</Link>
+      </div>
+      <div>
+        <Link to="/allHikes">All Hikes</Link>
       </div>
     </nav>
   )

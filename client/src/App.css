@@ -23,13 +23,12 @@ code {
 .navbar{
   background-color:rgb(72, 70, 70);
   font-family: 'Amatic SC';
-  font-size: 32px;
+  font-size: 40px;
   width: 100vw;
   color:white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
-  align-items: center;
 }
 
 
@@ -61,6 +60,13 @@ code {
   justify-content: space-between;
   font-family: 'Amatic SC';
   font-size: 32px;
+  margin: 25px;
+}
+
+#hike-info-button{
+  padding: 10px;
+  font-family: 'Amatic SC';
+  font-size: 18px;
   margin: 25px;
 }
 

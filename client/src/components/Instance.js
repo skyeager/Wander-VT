@@ -1,17 +1,16 @@
 import axios from 'axios'
+import { useState } from 'react'
+import UpdateInstance from './UpdateInstance'
 
 const Instance = (props) => {
-  //DO I NEED TO ADD IN STATE FOR THE FOLLOWING TWO?
+  const [updateInstance, setUpdateInstance] = useState(false)
 
-  // const updateInstance = async (instance) => {
-  //   let res = await axios.put(
-  //     `http://localhost:3001/wander/instances/${id}`,
-  //     {}
-  //   )
-  // }
-  //conditional rendering
-  //only shows form if click update instance
-  //make updateForm component
+  const handleClick = () => setUpdateInstance(true)
+
+  if (updateInstance) {
+    return <UpdateInstance />
+  } else {
+  }
 
   const deleteInstance = async () => {
     await axios.delete(
@@ -30,13 +29,10 @@ const Instance = (props) => {
       <h2>Title:{props.instance.title}</h2>
       <h2>Notes from the trail:{props.instance.message}</h2>
       <img src={props.instance.image} alt="hike photo" height="100px" />
-      <button>Update Post</button>
+      <button onClick={handleClick}>Update Post</button>
       <button onClick={deleteInstance}>Delete Post</button>
     </div>
   )
 }
-
-//add the following into Update Post button?:
-// onClick={() => updateInstance(instance)}
 
 export default Instance
