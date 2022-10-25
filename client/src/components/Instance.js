@@ -19,7 +19,7 @@ const Instance = (props) => {
   }
 
   if (updateInstance) {
-    return <UpdateInstance />
+    return <UpdateInstance instance={props.instance} />
   } else {
     return (
       <div className="instance">
@@ -30,12 +30,6 @@ const Instance = (props) => {
 
         <button onClick={handleClick}>Update Post</button>
         <button onClick={deleteInstance}>Delete Post</button>
-        <UpdateInstance
-          title={props.instance.title}
-          message={props.instance.message}
-          authorName={props.instance.authorName}
-          image={props.instance.image}
-        />
       </div>
     )
   }
