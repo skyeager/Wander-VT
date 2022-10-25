@@ -38,7 +38,7 @@ code {
   background-color: gray;
 }
 
-.form{
+.form, .update-form{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
