@@ -28,10 +28,16 @@ const Hike = () => {
       <h2>Elevation: {hike.elevation}</h2>
       <h2>Difficulty: {hike.difficulty}</h2>
       <h2>Distance: {hike.distance}</h2>
-      {/* {hike.instances.map((instance) => (
-        <Instance instance={instance} key={hike._id} />
-      ))} */}
-      <Form id={id} />
+      {hike.instances?.map((instance, index) => (
+        <Instance
+          instance={instance}
+          setHike={setHike}
+          index={index}
+          key={instance._id}
+          hike={hike}
+        />
+      ))}
+      <Form id={id} hike={hike} setHike={setHike} />
       <Link to="/">Home</Link>
     </div>
   )

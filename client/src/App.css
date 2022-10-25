@@ -61,6 +61,7 @@ code {
   justify-content: space-between;
   font-family: 'Amatic SC';
   font-size: 32px;
+  margin: 25px;
 }
 
 .instance{

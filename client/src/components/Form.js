@@ -26,6 +26,11 @@ const Form = (props) => {
       'http://localhost:3001/wander/instance',
       instancePackage
     )
+    let updatedHike = {
+      ...props.hike
+    }
+    updatedHike.instances.push(instancePackage)
+    props.setHike(updatedHike)
     setFormState(initialState)
   }
 
