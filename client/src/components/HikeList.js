@@ -24,7 +24,7 @@ const HikeList = (props) => {
     <div className="hike-grid">
       {hikes.map((hike) => (
         <div className="hike-card" key={hike._id}>
-          <img src={hike.image} alt={hike.title} />
+          <img src={hike.image} alt={hike.title} height="300px" width="350px" />
           <h3>{hike.title}</h3>
           <button onClick={() => showHike(hike)}>Hike Info</button>
         </div>

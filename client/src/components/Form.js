@@ -11,10 +11,6 @@ const Form = (props) => {
 
   const [formState, setFormState] = useState(initialState)
 
-  //when submit:
-  //create new instance
-  //push this instance into instance array (that lives in Hike model)
-  //get request for this hike (with the new instance on it, and past instances)
   //when the form is submitted this runs the function we want to run and then sets it back to empty
 
   //setting entered values to an instance
@@ -24,11 +20,8 @@ const Form = (props) => {
       ...formState,
       hikeId: props.id
     }
-    //setting state of hike (state of hike passed as props) equal to current state but adding instance information (as submitted on form)
-    //pass state as props?
 
-    //trying to do post request for this hike to display the instance added for this specific hike (along with all other previous instances of this hike):
-    //axios call pass instancePackage
+    //axios call pass instancePackage, sending to back end
     let res = await axios.post(
       'http://localhost:3001/wander/instance',
       instancePackage

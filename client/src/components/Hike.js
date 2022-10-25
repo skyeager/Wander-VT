@@ -19,16 +19,18 @@ const Hike = () => {
     getHike()
   }, [])
 
-  //make jsx for what instance component will look like
   //in Hike map through hike.instances array (either above or below form)to show them, display and pass props to an instance component
+  //push this instance into instance array (that lives in Hike model)
   return (
     <div className="hike">
       <h3>{hike.title}</h3>
-      <img src={hike.image} alt={hike.title} />
+      <img src={hike.image} alt={hike.title} height="300px" />
       <h2>Elevation: {hike.elevation}</h2>
       <h2>Difficulty: {hike.difficulty}</h2>
       <h2>Distance: {hike.distance}</h2>
-      <Instance />
+      {/* {hike.instances.map((instance) => (
+        <Instance instance={instance} key={hike._id} />
+      ))} */}
       <Form id={id} />
       <Link to="/">Home</Link>
     </div>
