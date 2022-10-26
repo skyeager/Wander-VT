@@ -9,13 +9,11 @@ const Hike = () => {
 
   const { id } = useParams()
 
+  const getHike = async () => {
+    const response = await axios.get(`http://localhost:3001/wander/hike/${id}`)
+    setHike(response.data.hike)
+  }
   useEffect(() => {
-    const getHike = async () => {
-      const response = await axios.get(
-        `http://localhost:3001/wander/hike/${id}`
-      )
-      setHike(response.data.hike)
-    }
     getHike()
   }, [])
 
@@ -35,9 +33,10 @@ const Hike = () => {
           index={index}
           key={index}
           hike={hike}
+          getHike={getHike}
         />
       ))}
-      <Form id={id} hike={hike} setHike={setHike} />
+      <Form id={id} hike={hike} setHike={setHike} getHike={getHike} />
       <Link to="/">Home</Link>
     </div>
   )

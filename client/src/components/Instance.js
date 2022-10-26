@@ -11,15 +11,24 @@ const Instance = (props) => {
     await axios.delete(
       `http://localhost:3001/wander/instances/${props.instance._id}`
     )
-    let updatedHike = {
-      ...props.hike
-    }
-    updatedHike.instances.splice(props.index, 1)
-    props.setHike(updatedHike)
+    // let updatedHike = {
+    //   ...props.hike
+    // }
+    // updatedHike.instances.splice(props.index, 1)
+    // props.setHike(updatedHike)
+    props.getHike()
   }
 
   if (updateInstance) {
-    return <UpdateInstance instance={props.instance} />
+    return (
+      <UpdateInstance
+        instance={props.instance}
+        hike={props.hike}
+        setHike={props.setHike}
+        getHike={props.getHike}
+        setUpdateInstance={setUpdateInstance}
+      />
+    )
   } else {
     return (
       <div className="instance">

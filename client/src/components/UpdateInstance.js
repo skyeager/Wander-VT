@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 const UpdateInstance = (props) => {
   const [formState, setFormState] = useState({
@@ -12,8 +13,19 @@ const UpdateInstance = (props) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    console.log(formState)
+    let res = await axios.put(
+      `http://localhost:3001/wander/instances/${props.instance._id}`,
+      formState
+    )
+    props.getHike()
+    props.setUpdateInstance(false)
+  }
+
   return (
-    <div className="update-form">
+    <form className="update-form" onSubmit={handleSubmit}>
       <label htmlFor="authorName">Name:</label>
       <input
         onChange={handleChange}
@@ -21,7 +33,7 @@ const UpdateInstance = (props) => {
         id="authorName"
         value={formState.authorName}
       />
-      <label htmlFor="title">Title:</label>{' '}
+      <label htmlFor="title">Title:</label>
       <input
         onChange={handleChange}
         type="text"
@@ -43,8 +55,8 @@ const UpdateInstance = (props) => {
         id="image"
         value={formState.image}
       />
-      <button>Post Update</button>
-    </div>
+      <button type="submit">Post Update</button>
+    </form>
   )
 }
 

@@ -26,12 +26,13 @@ const Form = (props) => {
       'http://localhost:3001/wander/instance',
       instancePackage
     )
-    let updatedHike = {
-      ...props.hike
-    }
-    updatedHike.instances.push(instancePackage)
-    props.setHike(updatedHike)
-    setFormState(initialState)
+    // let updatedHike = {
+    //   ...props.hike
+    // }
+    // updatedHike.instances.push(instancePackage)
+    // props.setHike(updatedHike)
+    // setFormState(initialState)
+    props.getHike()
   }
 
   //this sets the value entered in each field of the form equal to the state of the form

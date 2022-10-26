@@ -7,6 +7,9 @@ const createInstance = async (req, res) => {
     const hike = await Hike.findById(req.body.hikeId)
     hike.instances.push(instance._id)
     await hike.save()
+    //find hike by id
+    //splice
+    //save as new hike
     return res.status(201).json({
       instance
     })
@@ -28,7 +31,7 @@ const getInstanceById = async (req, res) => {
 
 const updatePost = async (req, res) => {
   try {
-    const instance = await Instance.findByIdAndUpdate(req.params.id, req.params)
+    const instance = await Instance.findByIdAndUpdate(req.params.id, req.body)
     return res.status(200).json({
       instance
     })

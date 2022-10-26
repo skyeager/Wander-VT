@@ -13,16 +13,6 @@ const main = async () => {
       image:
         'https://duxburyvermont.org/vertical/Sites/%7B00B6C2A9-912C-4C60-B699-582A202A10A3%7D/uploads/imagesCA50SV2L_Web.jpg'
     },
-
-    {
-      title: 'Snake Mountain',
-      elevation: 1287,
-      difficulty: 'Moderate',
-      distance: 28512,
-      image:
-        'https://npr.brightspotcdn.com/35/34/b3285b11420cb3e63148d87b6766/snake-mountain-view-ncpr-emily-russell-20210820.jpeg'
-    },
-
     {
       title: 'Colchester Pond',
       elevation: 394,
@@ -30,7 +20,113 @@ const main = async () => {
       distance: 16368,
       image:
         'https://www.onlyinyourstate.com/wp-content/uploads/2021/05/Screen-Shot-2021-05-17-at-6.55.38-PM.png'
+    },
+    {
+      title: 'Snake Mountain',
+      elevation: 1287,
+      difficulty: 'Moderate',
+      distance: 28512,
+      image:
+        'https://npr.brightspotcdn.com/35/34/b3285b11420cb3e63148d87b6766/snake-mountain-view-ncpr-emily-russell-20210820.jpeg'
     }
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
+    // {
+    //   title: ,
+    //   elevation: ,
+    //   difficulty: ,
+    //   distance: ,
+    //   image:
+    // },
   ]
 
   await Hike.insertMany(hikes)
