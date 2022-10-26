@@ -20,6 +20,7 @@ const Form = (props) => {
       ...formState,
       hikeId: props.id
     }
+    setFormState(initialState)
 
     //axios call pass instancePackage, sending to back end
     let res = await axios.post(

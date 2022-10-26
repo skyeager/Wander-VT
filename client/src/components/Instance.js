@@ -35,10 +35,19 @@ const Instance = (props) => {
         <h2>Name: {props.instance.authorName}</h2>
         <h2>Title:{props.instance.title}</h2>
         <h2>Notes from the trail:{props.instance.message}</h2>
-        <img src={props.instance.image} alt="hike photo" height="100px" />
+        <img
+          className="post-image"
+          src={props.instance.image}
+          alt="hike photo"
+          height="100px"
+        />
 
-        <button onClick={handleClick}>Update Post</button>
-        <button onClick={deleteInstance}>Delete Post</button>
+        <button className="instance-buttons" onClick={handleClick}>
+          Update Post
+        </button>
+        <button className="instance-buttons" onClick={deleteInstance}>
+          Delete Post
+        </button>
       </div>
     )
   }

@@ -22,7 +22,12 @@ const Hike = () => {
   return (
     <div className="hike">
       <h3>{hike.title}</h3>
-      <img src={hike.image} alt={hike.title} height="300px" />
+      <img
+        className="hike-image"
+        src={hike.image}
+        alt={hike.title}
+        height="300px"
+      />
       <h2>Elevation: {hike.elevation}</h2>
       <h2>Difficulty: {hike.difficulty}</h2>
       <h2>Distance: {hike.distance}</h2>
