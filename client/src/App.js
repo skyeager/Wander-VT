@@ -1,6 +1,5 @@
 import './App.css'
 import NavBar from './components/NavBar'
-import Home from './components/Home'
 import About from './components/About'
 import HikeList from './components/HikeList'
 import { Routes, Route } from 'react-router-dom'
@@ -15,9 +14,8 @@ const App = () => {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<About />} />
           <Route path="/allHikes/*" element={<HikeList />} />
-          <Route path="/about" element={<About />} />
           <Route path="/hike/:id" element={<Hike />} />
           <Route path="/instance" element={<Form />} />
         </Routes>

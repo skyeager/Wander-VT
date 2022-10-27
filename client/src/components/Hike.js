@@ -42,7 +42,7 @@ const Hike = () => {
         />
       ))}
       <Form id={id} hike={hike} setHike={setHike} getHike={getHike} />
-      <Link to="/">Home</Link>
+      <Link to="/allHikes">Back to all hikes</Link>
     </div>
   )
 }
