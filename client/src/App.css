@@ -12,6 +12,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-break:break-all;
+  background-color: rgb(195, 190, 190);
 }
 
 code {
@@ -99,6 +101,10 @@ code {
   margin: 50px;
 }
 
+h2{
+  margin:0px;
+}
+
 #hike-info-button{
   padding:5px;
   font-family: 'Raleway';
@@ -117,11 +123,13 @@ background-color: gray;
   border: 2px solid black;
   width: 400px;
   height: 350px;
-  font-size: 14px;
+  font-size: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
+  margin: 20px;
 }
 
 
@@ -147,9 +155,6 @@ background-color: gray;
   line-height: 20px;
 }
 
-.post-image{
-  padding: 20px;
-}
 
 .instance-buttons{
   display: flex;
@@ -159,4 +164,9 @@ background-color: gray;
 .form-text{
   font-family: 'Raleway';
   font-size: 18px;
+}
+
+.all-instances{
+  display: flex;
+  flex-wrap: wrap;
 }

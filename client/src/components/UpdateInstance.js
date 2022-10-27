@@ -47,6 +47,7 @@ const UpdateInstance = (props) => {
         id="message"
         cols="30"
         rows="10"
+        maxLength={150}
       ></textarea>
       <label htmlFor="image">Post Image (url):</label>
       <input

@@ -39,15 +39,22 @@ const Instance = (props) => {
           className="post-image"
           src={props.instance.image}
           alt="hike photo"
-          height="100px"
+          width="100px"
         />
-
-        <button className="instance-buttons" onClick={handleClick}>
-          Update Post
-        </button>
-        <button className="instance-buttons" onClick={deleteInstance}>
-          Delete Post
-        </button>
+        <div
+          style={{
+            display: 'flex',
+            width: '100%',
+            justifyContent: 'space-around'
+          }}
+        >
+          <button className="instance-buttons" onClick={handleClick}>
+            Update Post
+          </button>
+          <button className="instance-buttons" onClick={deleteInstance}>
+            Delete Post
+          </button>
+        </div>
       </div>
     )
   }

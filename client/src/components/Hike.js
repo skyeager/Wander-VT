@@ -31,16 +31,18 @@ const Hike = () => {
       <h2>Elevation: {hike.elevation}</h2>
       <h2>Difficulty: {hike.difficulty}</h2>
       <h2>Distance: {hike.distance}</h2>
-      {hike.instances?.map((instance, index) => (
-        <Instance
-          instance={instance}
-          setHike={setHike}
-          index={index}
-          key={index}
-          hike={hike}
-          getHike={getHike}
-        />
-      ))}
+      <div className="all-instances">
+        {hike.instances?.map((instance, index) => (
+          <Instance
+            instance={instance}
+            setHike={setHike}
+            index={index}
+            key={index}
+            hike={hike}
+            getHike={getHike}
+          />
+        ))}
+      </div>
       <Form id={id} hike={hike} setHike={setHike} getHike={getHike} />
       <Link to="/allHikes" className="navbar-links">
         Back to All Hikes
