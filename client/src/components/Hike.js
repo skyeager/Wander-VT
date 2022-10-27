@@ -21,7 +21,7 @@ const Hike = () => {
   //push this instance into instance array (that lives in Hike model)
   return (
     <div className="hike">
-      <h3>{hike.title}</h3>
+      <h1>{hike.title}</h1>
       <img
         className="hike-image"
         src={hike.image}
@@ -42,7 +42,9 @@ const Hike = () => {
         />
       ))}
       <Form id={id} hike={hike} setHike={setHike} getHike={getHike} />
-      <Link to="/allHikes">Back to all hikes</Link>
+      <Link to="/allHikes" className="navbar-links">
+        Back to All Hikes
+      </Link>
     </div>
   )
 }

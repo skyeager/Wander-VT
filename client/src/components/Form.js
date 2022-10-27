@@ -45,6 +45,7 @@ const Form = (props) => {
     <form className="form" onSubmit={handleSubmit}>
       <label htmlFor="authorName">Name:</label>
       <input
+        className="form-text"
         onChange={handleChange}
         type="text"
         id="authorName"
@@ -52,6 +53,7 @@ const Form = (props) => {
       />
       <label htmlFor="title">Title:</label>
       <input
+        className="form-text"
         onChange={handleChange}
         type="text"
         id="title"
@@ -59,6 +61,7 @@ const Form = (props) => {
       />
       <label htmlFor="message">Message:</label>
       <textarea
+        className="form-text"
         onChange={handleChange}
         value={formState.message}
         id="message"
@@ -67,6 +70,7 @@ const Form = (props) => {
       ></textarea>
       <label htmlFor="image">Post Image (url):</label>
       <input
+        className="form-text"
         onChange={handleChange}
         type="text"
         id="image"

@@ -28,13 +28,48 @@ code {
   color:rgb(196, 195, 195);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 70px;
+  line-height: 50px;
 }
 
+.navbar-links{
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: black;
+  padding-left: 20px;
+}
 
-.home{
+.about-link{
+  color:black;
+}
+
+.navbar-links:link{
+  color:black;
+}
+
+.navbar-links:hover{
+ color:rgb(99, 138, 99);
+}
+
+.about{
   font-family:'Raleway';
   background-color: rgb(86, 84, 84);
+  border: 2px sold black;
+  height: 800px;
+  width: 900px;
+  padding: 30px;
+  margin: 50px;
+  font-size: 24px;
+  color:rgb(196, 195, 195);
+  text-align: center;
+}
+
+.about-header{
+  font-size: 48px;
+  color:rgb(196, 195, 195);
 }
 
 .form {
@@ -61,7 +96,7 @@ code {
   font-family: 'Raleway';
   color: rgb(79, 79, 79);
   font-size: 32px;
-  margin: 20px;
+  margin: 50px;
 }
 
 #hike-info-button{
@@ -73,7 +108,24 @@ code {
   margin: 0px auto 50px;
 }
 
-.instance, .update-form{
+#hike-info-button:hover{
+color: white;
+background-color: gray;
+}
+
+.instance{
+  border: 2px solid black;
+  width: 400px;
+  height: 350px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.update-form{
   border: 2px solid black;
   width: 400px;
   height: 350px;
@@ -83,11 +135,6 @@ code {
   justify-content: space-between;
   align-items: center;
   line-height: 5px;
-}
-.update-form{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .hike-card-image, .hike-image{
@@ -107,4 +154,9 @@ code {
 .instance-buttons{
   display: flex;
   flex-direction: row;
+}
+
+.form-text{
+  font-family: 'Raleway';
+  font-size: 18px;
 }

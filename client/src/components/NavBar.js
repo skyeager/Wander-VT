@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <h3>Wander VT</h3>
-      <div>
-        <Link to="/">About</Link>
-      </div>
-      <div>
-        <Link to="/allHikes">All Hikes</Link>
-      </div>
+      <h3>
+        Wander VT
+        <Link to="/" className="navbar-links">
+          About
+        </Link>
+        <Link to="/allHikes" className="navbar-links">
+          All Hikes
+        </Link>
+      </h3>
     </nav>
   )
 }
