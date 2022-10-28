@@ -16,7 +16,6 @@ const HikeList = (props) => {
   }, [])
 
   const showHike = (hike) => {
-    console.log(hike)
     navigate(`/hike/${hike._id}`)
   }
 

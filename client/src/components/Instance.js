@@ -11,11 +11,7 @@ const Instance = (props) => {
     await axios.delete(
       `http://localhost:3001/wander/instances/${props.instance._id}`
     )
-    // let updatedHike = {
-    //   ...props.hike
-    // }
-    // updatedHike.instances.splice(props.index, 1)
-    // props.setHike(updatedHike)
+
     props.getHike()
   }
 

@@ -15,7 +15,6 @@ const UpdateInstance = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(formState)
     let res = await axios.put(
       `http://localhost:3001/wander/instances/${props.instance._id}`,
       formState
@@ -28,6 +27,7 @@ const UpdateInstance = (props) => {
     <form className="update-form" onSubmit={handleSubmit}>
       <label htmlFor="authorName">Name:</label>
       <input
+        className="update-text"
         onChange={handleChange}
         type="text"
         id="authorName"
@@ -35,6 +35,7 @@ const UpdateInstance = (props) => {
       />
       <label htmlFor="title">Title:</label>
       <input
+        className="update-text"
         onChange={handleChange}
         type="text"
         id="title"
@@ -42,6 +43,7 @@ const UpdateInstance = (props) => {
       />
       <label htmlFor="message">Message:</label>
       <textarea
+        className="update-text"
         onChange={handleChange}
         value={formState.message}
         id="message"
@@ -51,6 +53,7 @@ const UpdateInstance = (props) => {
       ></textarea>
       <label htmlFor="image">Post Image (url):</label>
       <input
+        className="update-text"
         onChange={handleChange}
         type="text"
         id="image"
@@ -62,7 +65,3 @@ const UpdateInstance = (props) => {
 }
 
 export default UpdateInstance
-
-// //conditionally render when click update to show update form
-// //have words show up with input fields with starting state value=formstate (object of key value pairs to pass to backend) of instance (not blank initial state)
-// //handle change the same

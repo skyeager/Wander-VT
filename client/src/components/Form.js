@@ -11,9 +11,6 @@ const Form = (props) => {
 
   const [formState, setFormState] = useState(initialState)
 
-  //when the form is submitted this runs the function we want to run and then sets it back to empty
-
-  //setting entered values to an instance
   const handleSubmit = async (event) => {
     event.preventDefault()
     const instancePackage = {
@@ -22,21 +19,14 @@ const Form = (props) => {
     }
     setFormState(initialState)
 
-    //axios call pass instancePackage, sending to back end
     let res = await axios.post(
       'http://localhost:3001/wander/instance',
       instancePackage
     )
-    // let updatedHike = {
-    //   ...props.hike
-    // }
-    // updatedHike.instances.push(instancePackage)
-    // props.setHike(updatedHike)
-    // setFormState(initialState)
+
     props.getHike()
   }
 
-  //this sets the value entered in each field of the form equal to the state of the form
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }

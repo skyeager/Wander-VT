@@ -17,8 +17,6 @@ const Hike = () => {
     getHike()
   }, [])
 
-  //in Hike map through hike.instances array (either above or below form)to show them, display and pass props to an instance component
-  //push this instance into instance array (that lives in Hike model)
   return (
     <div className="hike">
       <h1>{hike.title}</h1>
@@ -52,5 +50,3 @@ const Hike = () => {
 }
 
 export default Hike
-
-// as defined in routes/index.js, /instance allows someone to create an instance of a hike

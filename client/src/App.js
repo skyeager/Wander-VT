@@ -5,6 +5,7 @@ import HikeList from './components/HikeList'
 import { Routes, Route } from 'react-router-dom'
 import Hike from './components/Hike'
 import Form from './components/Form'
+import PhotoCredits from './components/ImageCredits'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/allHikes/*" element={<HikeList />} />
           <Route path="/hike/:id" element={<Hike />} />
           <Route path="/instance" element={<Form />} />
+          <Route path="/imagecredits" element={<PhotoCredits />} />
         </Routes>
       </main>
     </div>

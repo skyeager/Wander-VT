@@ -166,6 +166,11 @@ background-color: gray;
   font-size: 18px;
 }
 
+.update-text{
+  font-family: 'Raleway';
+  font-size: 14px;
+}
+
 .all-instances{
   display: flex;
   flex-wrap: wrap;

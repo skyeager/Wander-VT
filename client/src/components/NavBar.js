@@ -11,12 +11,12 @@ const NavBar = () => {
         <Link to="/allHikes" className="navbar-links">
           All Hikes
         </Link>
+        <Link to="/imagecredits" className="navbar-links">
+          Image Credits
+        </Link>
       </h3>
     </nav>
   )
 }
 
 export default NavBar
-
-//need to set up link for About section of NavBar
-/* <Link to="/about">About</Link> */
