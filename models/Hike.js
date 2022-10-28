@@ -13,5 +13,3 @@ const Hike = new Schema(
 )
 
 module.exports = Hike
-
-//this is for each individual hike

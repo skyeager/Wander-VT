@@ -4,11 +4,9 @@ const ImageCredits = () => {
   return (
     <div>
       <h1>Image Credits</h1>
-      <ul>
+      <ul className="image-credits">
         <li>
-          <a href="scenesofvermont.com/vermont-areas-and-towns/bolton-valley.html">
-            Bolton Valley
-          </a>
+          <a href="https://www.boltonvalley.com/">Bolton Valley</a>
         </li>
         <li>
           <a href="https://duxburyvermont.org/camelshump">Camel's Hump</a>

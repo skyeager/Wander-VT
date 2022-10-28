@@ -35,5 +35,3 @@ const HikeList = (props) => {
 }
 
 export default HikeList
-
-//referenced the boat lecture(react router lecture) and specifically the "Listings" file in this file.
